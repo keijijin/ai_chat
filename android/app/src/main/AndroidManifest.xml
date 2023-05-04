@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sample.ai_chat">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
    <application
         android:label="ai_chat"
         android:name="${applicationName}"

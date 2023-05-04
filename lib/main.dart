@@ -22,8 +22,8 @@ void main() async {
       create: (context) => ChatViewModel(
         model: ChatModel(
           apiUrl: apiUrl,
-          temperature: 0.7,
-          maxTokens: 1024,
+          temperature: temperature,
+          maxTokens: maxTokens,
         ),
       ),
       child: MyApp(),

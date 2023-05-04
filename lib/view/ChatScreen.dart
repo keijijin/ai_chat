@@ -14,7 +14,7 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.lightBlue[200],
       appBar: AppBar(
-        title: Text('Chat Interface'),
+        title: Text('AI Chat'),
         actions: [
           IconButton(
             onPressed: () => showDialog(
