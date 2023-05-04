@@ -439,7 +439,7 @@
             "outputFile": "com.sample.ai_chat.app-merged_res-11:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/kjin/AndroidStudioProjects/MyAndroid/ai_chat/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Volumes/Transcend/kjin/AndroidStudioProjects/MyAndroid/ai_chat/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -527,7 +527,7 @@
                     }
                 },
                 {
-                    "source": "/Users/kjin/AndroidStudioProjects/MyAndroid/ai_chat/android/app/src/main/res/values/styles.xml",
+                    "source": "/Volumes/Transcend/kjin/AndroidStudioProjects/MyAndroid/ai_chat/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

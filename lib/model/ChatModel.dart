@@ -1,10 +1,11 @@
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 import 'Message.dart';
 
-class ChatModel {
+class ChatModel with ChangeNotifier {
   String apiUrl;
   double temperature;
   int maxTokens;
@@ -14,6 +15,17 @@ class ChatModel {
       {required this.apiUrl,
       required this.temperature,
       required this.maxTokens});
+
+  void updateSettings({
+    required String apiUrl,
+    required double temperature,
+    required int maxTokens,
+  }) {
+    this.apiUrl = apiUrl;
+    this.temperature = temperature;
+    this.maxTokens = maxTokens;
+    notifyListeners();
+  }
 
   Future<String> sendMessage(List<Message> messages, String text) async {
     try {

@@ -33,6 +33,7 @@ class SettingsDialog extends StatelessWidget {
       actions: [
         TextButton(
           onPressed: () {
+            viewModel.loadSettings();
             Navigator.pop(context);
           },
           child: Text('キャンセル'),
@@ -45,6 +46,7 @@ class SettingsDialog extends StatelessWidget {
                   double.tryParse(temperatureController.text.trim()) ?? 0.7,
               maxTokens: int.tryParse(maxTokensController.text.trim()) ?? 1024,
             );
+            viewModel.saveSettings();
             Navigator.pop(context);
           },
           child: Text('保存'),

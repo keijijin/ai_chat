@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../model/ChatModel.dart';
 import '../model/Message.dart';
@@ -15,6 +16,22 @@ class ChatViewModel extends ChangeNotifier {
 
   // _model の getter を追加
   ChatModel get model => _model;
+
+  Future<void> loadSettings() async {
+    final prefs = await SharedPreferences.getInstance();
+    final apiUrl = prefs.getString('apiUrl') ?? model.apiUrl;
+    final temperature = prefs.getDouble('temperature') ?? model.temperature;
+    final maxTokens = prefs.getInt('maxTokens') ?? model.maxTokens;
+    updateSettings(
+        apiUrl: apiUrl, temperature: temperature, maxTokens: maxTokens);
+  }
+
+  Future<void> saveSettings() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setString('apiUrl', model.apiUrl);
+    prefs.setDouble('temperature', model.temperature);
+    prefs.setInt('maxTokens', model.maxTokens);
+  }
 
   void updateSettings(
       {required String apiUrl,
