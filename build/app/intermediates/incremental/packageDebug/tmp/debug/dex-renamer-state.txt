@@ -1,4 +1,0 @@
-#Thu May 04 16:20:52 JST 2023
-base.0=/Volumes/Transcend/kjin/AndroidStudioProjects/MyAndroid/ai_chat/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
